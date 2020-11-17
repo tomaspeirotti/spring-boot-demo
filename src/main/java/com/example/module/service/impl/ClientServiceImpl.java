@@ -27,7 +27,7 @@ public class ClientServiceImpl implements ClientService {
   }
 
   public Client createPlayer(String name, String lastName, String email, Date birthDate) {
-    log.info("Request to create a player being executed");
+    log.info("Request to create a Client being executed");
     Client client;
     UUID uuid;
     try {
@@ -43,14 +43,13 @@ public class ClientServiceImpl implements ClientService {
           .email(email)
           .build();
     } catch (Exception e) {
-      log.error("Error creating player", e);
+      log.error("Error creating Client", e);
       throw new IllegalArgumentException();
     }
 
     createdPlayers.put(uuid, client);
 
     try {
-      log.info("Already Created Players: {}", createdPlayers);
       return repository.save(client);
     } catch (Exception e) {
       log.error("Error persisting entity in the database", e);
