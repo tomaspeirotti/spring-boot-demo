@@ -14,9 +14,9 @@ spring:
     name: example
   datasource:
     platform: mysql
-    url: jdbc:mysql://localhost:3307/example?useSSL=false&autoReconnect=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://34.95.236.70:3306/demomysql?useSSL=false&autoReconnect=true&allowPublicKeyRetrieval=true
     username: root
-    password: password
+    password: aK4Hdgecxmkovg77
     driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
     database: mysql
@@ -30,6 +30,10 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-
+#  could:
+#    gcp:
+#      sql:
+#        database-name: demomysql
+#        instance-connection-name: spring-boot-demo-295914:southamerica-east1:demo-mysql
 server:
   port: 8080
