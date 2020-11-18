@@ -1,23 +1,19 @@
 package com.example.module.model;
 
-import java.io.Serializable;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.Period;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
-import sun.jvm.hotspot.utilities.Interval;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
