@@ -1,8 +1,11 @@
 package com.example.module.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -31,4 +34,13 @@ public class Client implements Serializable {
   private String email;
 
   private Date birthDate;
+
+  public int getAge() {
+    if (birthDate != null) {
+      Period period = Period.between(LocalDate.from(birthDate.toInstant()), LocalDate.from(new Date().toInstant()));
+      return period.getYears();
+    } else {
+      return -1;
+    }
+  }
 }

@@ -4,6 +4,7 @@ import com.example.module.model.Client;
 import com.example.module.model.dto.ClientDTO;
 import com.example.module.model.dto.ClientRequestDTO;
 import com.example.module.model.dto.ClientResponseDTO;
+import com.example.module.model.dto.KpiResponseDTO;
 import com.example.module.service.impl.EntityMapper;
 import com.example.module.service.ClientService;
 import java.util.List;
@@ -63,4 +64,8 @@ public class ClientController {
     return ResponseEntity.status(HttpStatus.OK).build();
   }
 
+  @GetMapping(value = "/kpi")
+  public ResponseEntity<KpiResponseDTO> getKpi() {
+      return ResponseEntity.ok(this.clientService.getClientsKpis());
+  }
 }
