@@ -46,7 +46,7 @@ public class ClientController {
   public ResponseEntity<ClientResponseDTO> findAll() {
     List<Client> clients = this.clientService.findAll();
     return ResponseEntity.ok(ClientResponseDTO.builder()
-        .players(clients.stream()
+        .clients(clients.stream()
             .map(entityMapper::toDto)
             .collect(Collectors.toList()))
         .build());

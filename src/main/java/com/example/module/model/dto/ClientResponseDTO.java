@@ -7,5 +7,5 @@ import lombok.Data;
 @Data
 @Builder
 public class ClientResponseDTO {
-  private List<ClientDTO> players;
+  private List<ClientDTO> clients;
 }

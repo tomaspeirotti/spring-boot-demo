@@ -1,9 +1,9 @@
 package com.example.module.model.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import java.util.Date;
 import lombok.Builder;
 import lombok.Data;
+
+import java.util.Date;
 
 @Data
 @Builder
@@ -14,6 +14,5 @@ public class ClientRequestDTO {
 
   private String email;
 
-  @JsonFormat(pattern = "dd-MM-yyyy")
   private Date birthDate;
 }

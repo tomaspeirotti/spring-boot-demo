@@ -1,9 +1,12 @@
 package com.example.module.model;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import javax.persistence.Column;
@@ -14,6 +17,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
+import sun.jvm.hotspot.utilities.Interval;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -37,10 +41,13 @@ public class Client implements Serializable {
 
   public int getAge() {
     if (birthDate != null) {
-      Period period = Period.between(LocalDate.from(birthDate.toInstant()), LocalDate.from(new Date().toInstant()));
-      return period.getYears();
+      Calendar today = new GregorianCalendar();
+      today.setTime(new Date());
+      Calendar birth = new GregorianCalendar();
+      birth.setTime(birthDate);
+      return today.get(Calendar.YEAR) - birth.get(Calendar.YEAR);
     } else {
-      return -1;
+      return 0;
     }
   }
 }

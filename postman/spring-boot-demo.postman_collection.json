@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "2c04e00f-802b-4ef3-b675-59db4c20247a",
+		"name": "spring-boot-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clients Kpi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spring-boot-demo-295914.rj.r.appspot.com/api/client/kpi",
+					"protocol": "https",
+					"host": [
+						"spring-boot-demo-295914",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"client",
+						"kpi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clients List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spring-boot-demo-295914.rj.r.appspot.com/api/client/list",
+					"protocol": "https",
+					"host": [
+						"spring-boot-demo-295914",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"client",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clients Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spring-boot-demo-295914.rj.r.appspot.com/api/client/page?searchTerm=",
+					"protocol": "https",
+					"host": [
+						"spring-boot-demo-295914",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"client",
+						"page"
+					],
+					"query": [
+						{
+							"key": "searchTerm",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://spring-boot-demo-295914.rj.r.appspot.com/api/client/deleteAll",
+					"protocol": "https",
+					"host": [
+						"spring-boot-demo-295914",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"client",
+						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"birthDate\": \"1984-06-23\",\n    \"email\": \"tomas.peirotti@gmail.com\",\n    \"lastName\": \"Peirotti\",\n    \"name\": \"Tomas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spring-boot-demo-295914.rj.r.appspot.com/api/client/create",
+					"protocol": "https",
+					"host": [
+						"spring-boot-demo-295914",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"client",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "demo-password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "demo-username",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "46a99b63-e23f-4a68-9b6a-5b233b58b7d7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e4dabe96-c192-4e32-9c3a-23c70f725d6c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
